@@ -17,7 +17,7 @@ jobs:
          echo "My first Job"
          echo "Successful"
      
-     - uses: actions/checkout@4.0
+     - uses: actions/checkout@v4
 
      - name: List Data in Directory
        run: ls -lhart
