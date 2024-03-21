@@ -1,0 +1,23 @@
+name: Github Actions Demo
+on:
+ push:
+   branches: [ main ]
+   paths-ignore: [.github/**]
+ pull_request:
+   branches: [ main ]
+ schedule:
+   - cron: '*/10 * * * *'
+ workflow_dispatch:
+
+jobs:
+ Build:
+   runs-on: ubuntu-latest
+   steps: 
+     - run: | 
+         echo "My first Job"
+         echo "Successful"
+     
+     - uses: actions/checkout@4.0
+
+     - name: List Data in Directory
+       run: ls -lhart
